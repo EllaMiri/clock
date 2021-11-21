@@ -9,4 +9,9 @@ body {
   justify-content: center;
   align-items: center;
   background-color: lightpink;
+  flex-direction: column;
+}
+
+h2 {
+  margin: 0.5rem;
 }
