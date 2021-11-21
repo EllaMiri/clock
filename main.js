@@ -7,7 +7,8 @@ function main() {
 
 /** Keeps the time updated on the page */
 function startClock() {
-setInterval(renderClock, 1000)
+    renderClock();
+    setInterval(renderClock, 1000)
 }
 
 /** Updates the page with current time */
