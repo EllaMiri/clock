@@ -16,10 +16,20 @@ function renderClock() {
     const h2 = document.getElementById("time")
     
     const date = new Date()
+    
+    h2.innerText = getCurrentTimeString(date);
+}
+
+/**
+ * Constructs the time string from a date, includes seconds
+ * @param {Date} date 
+ * @returns {String} in format HH:mm:ss
+ */
+function getCurrentTimeString(date) {
     let hours = date.getHours();
     let minutes = date.getMinutes();
     let seconds = date.getSeconds();
-
+    
     if (hours < 10) {
         hours = "0" + hours;
     }
@@ -30,5 +40,6 @@ function renderClock() {
         seconds = "0" + seconds;
     }
 
-    h2.innerText = hours + ":"  + minutes + ":" + seconds;
+    return hours + ":"  + minutes + ":" + seconds
+
 }
